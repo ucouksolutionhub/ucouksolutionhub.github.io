@@ -1,229 +1,964 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="google-site-verification" content="J_O94Vzk1uHLemz6ShH6jnvlp6njuLd-MtNblk1PQaU" />
-<meta name="msvalidate.01" content="48AE2493C936F42500D3EE2F9ECCC0A0" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>u.co.uk/activate | Card Activation Portal</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      background: linear-gradient(180deg, #f0f4ff, #ffffff);
-      color: #333;
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="J_O94Vzk1uHLemz6ShH6jnvlp6njuLd-MtNblk1PQaU">
+<meta name="msvalidate.01" content="48AE2493C936F42500D3EE2F9ECCC0A0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Learn how to activate your UK credit card with this simple step-by-step guide. Find activation instructions, security tips and troubleshooting help.">
+
+<title>U.co.uk/activate - Credit Card Activation Guide</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --blue: #1769e0;
+    --blue-dark: #103d85;
+    --navy: #071d40;
+    --light-blue: #edf5ff;
+    --text: #172b49;
+    --muted: #66758a;
+    --white: #ffffff;
+    --border: #e3ebf5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f4f7fc;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(7,29,64,.97);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 18px rgba(0,0,0,.12);
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 17px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #64b5ff;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.nav-links a {
+    color: #e6efff;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #75baff;
+}
+
+.nav-btn {
+    background: #ffffff;
+    color: var(--blue-dark) !important;
+    padding: 10px 18px;
+    border-radius: 7px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+    linear-gradient(90deg, rgba(5,23,53,.96), rgba(5,36,80,.82), rgba(5,36,80,.35)),
+    url('https://copilot.microsoft.com/th/id/BCO.85a7831a-8604-4a3b-be45-587c673113ea.png')
+    center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 75px 25px;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.25);
+    color: #b9dcff;
+    padding: 7px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 700px;
+    color: white;
+    font-size: clamp(38px, 6vw, 62px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    margin: 24px 0 18px;
+}
+
+.hero h1 span {
+    color: #79bdff;
+}
+
+.hero p {
+    color: #d7e5f8;
+    max-width: 590px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    background: linear-gradient(90deg, #2684f5, #0752bd);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(0,90,220,.25);
+    transition: .3s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,90,220,.35);
+}
+
+.secondary-btn {
+    display: inline-block;
+    color: white;
+    border: 1px solid rgba(255,255,255,.5);
+    padding: 14px 23px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+/* COMMON SECTIONS */
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+.section {
+    padding: 75px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading small {
+    color: var(--blue);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.section-heading h2 {
+    font-size: clamp(27px, 4vw, 38px);
+    color: var(--navy);
+    margin: 9px 0;
+    letter-spacing: -1px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    max-width: 650px;
+    margin: auto;
+}
+
+/* SUMMARY */
+
+.summary-box {
+    background: linear-gradient(120deg, #ffffff, #eaf3ff);
+    border: 1px solid #d8e8fb;
+    border-radius: 17px;
+    padding: 35px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 8px 30px rgba(20,70,130,.06);
+}
+
+.summary-box h2 {
+    font-size: 26px;
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.summary-box p {
+    color: var(--muted);
+}
+
+.summary-icon {
+    width: 85px;
+    height: 85px;
+    border-radius: 22px;
+    display: grid;
+    place-items: center;
+    background: #dcecff;
+    color: var(--blue);
+    font-size: 39px;
+}
+
+/* ACTIVATION STEPS */
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.step-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 27px;
+    box-shadow: 0 6px 22px rgba(20,50,90,.05);
+    transition: .3s;
+}
+
+.step-card:hover {
+    transform: translateY(-6px);
+    border-color: #9dc7fa;
+    box-shadow: 0 12px 30px rgba(20,80,160,.1);
+}
+
+.step-number {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: #e5f0ff;
+    color: var(--blue);
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.step-card h3 {
+    color: var(--navy);
+    font-size: 17px;
+    margin-bottom: 9px;
+}
+
+.step-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* SECURITY */
+
+.security-section {
+    background: #eaf3ff;
+}
+
+.security-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.security-card {
+    background: white;
+    padding: 27px;
+    border-radius: 13px;
+    border: 1px solid #dce9f8;
+    text-align: center;
+}
+
+.security-icon {
+    font-size: 35px;
+    margin-bottom: 13px;
+}
+
+.security-card h3 {
+    color: var(--navy);
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.security-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* TROUBLESHOOTING */
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.problem-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 25px;
+    transition: .3s;
+}
+
+.problem-card:hover {
+    border-color: #9dc7fa;
+}
+
+.problem-icon {
+    color: var(--blue);
+    font-size: 25px;
+}
+
+.problem-card h3 {
+    color: var(--navy);
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.problem-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* FAQ */
+
+.faq-list {
+    max-width: 850px;
+    margin: auto;
+}
+
+details {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 19px 22px;
+    margin-bottom: 13px;
+    box-shadow: 0 3px 12px rgba(20,50,90,.03);
+}
+
+summary {
+    cursor: pointer;
+    color: var(--navy);
+    font-weight: 700;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+summary::after {
+    content: '+';
+    color: var(--blue);
+    font-size: 22px;
+}
+
+details[open] summary::after {
+    content: '−';
+}
+
+details p {
+    color: var(--muted);
+    font-size: 14px;
+    padding-top: 14px;
+}
+
+/* CTA */
+
+.cta {
+    text-align: center;
+    background: linear-gradient(120deg, #092b60, #1769c7);
+    padding: 55px 25px;
+    border-radius: 18px;
+    color: white;
+}
+
+.cta h2 {
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.cta p {
+    color: #d8e9ff;
+    margin-bottom: 24px;
+}
+
+.cta .primary-btn {
+    background: white;
+    color: var(--blue-dark);
+}
+
+/* FOOTER */
+
+footer {
+    background: #071d40;
+    color: white;
+    text-align: center;
+    padding: 45px 20px 25px;
+    margin-top: 50px;
+}
+
+.footer-logo {
+    font-size: 23px;
+    font-weight: 800;
+    margin-bottom: 13px;
+}
+
+.footer-logo span {
+    color: #79bdff;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: #d6e5fa;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #79bdff;
+}
+
+footer p {
+    color: #bdcce0;
+    max-width: 780px;
+    margin: 10px auto;
+    font-size: 13px;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,.15);
+    padding-top: 20px;
+    margin-top: 25px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+    .steps-grid {
+        grid-template-columns: repeat(2,1fr);
     }
 
-    /* Banner Section */
-    .banner {
-      background: url('https://copilot.microsoft.com/th/id/BCO.85a7831a-8604-4a3b-be45-587c673113ea.png') no-repeat center center/cover;
-      height: 450px;
-      display: flex;
-      align-items: center;
-      color: white;
-      padding-left: 60px;
-    }
-    .banner-content {
-      max-width: 600px;
-      text-align: left;
-    }
-    .banner-content h1 {
-      font-size: 3em;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-      margin-bottom: 20px;
-    }
-    .banner-content button {
-      background: linear-gradient(90deg, #007bff, #004aad);
-      color: yellow;
-      border: none;
-      padding: 16px 32px;
-      border-radius: 8px;
-      font-size: 1.4em;
-      cursor: pointer;
-      transition: transform 0.3s, background 0.3s;
-    }
-    .banner-content button:hover {
-      background: linear-gradient(90deg, #0056b3, #003580);
-      transform: scale(1.05);
+    .security-grid {
+        grid-template-columns: repeat(2,1fr);
     }
 
-    /* Navigation */
-    nav {
-      background-color: #003580;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 15px 0;
+    .nav-links {
+        gap: 13px;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 10px 20px;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ffd700;
+}
+
+@media(max-width: 600px) {
+    .nav-inner {
+        flex-direction: column;
+        gap: 14px;
     }
 
-    /* Sections */
-    section {
-      max-width: 1100px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #004aad;
-      border-left: 6px solid #007bff;
-      padding-left: 12px;
-      margin-bottom: 20px;
-    }
-    p, li {
-      line-height: 1.8;
-      font-size: 1.1em;
-    }
-    ol li {
-      margin-bottom: 15px;
-    }
-    button {
-      background: linear-gradient(90deg, #007bff, #004aad);
-      color: white;
-      border: none;
-      padding: 16px 30px;
-      border-radius: 8px;
-      font-size: 1.1em;
-      cursor: pointer;
-      transition: transform 0.3s, background 0.3s;
-    }
-    button:hover {
-      background: linear-gradient(90deg, #0056b3, #003580);
-      transform: scale(1.05);
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
     }
 
-    /* Footer */
-    footer {
-      background-color: #004aad;
-      color: white;
-      text-align: center;
-      padding: 25px 20px;
-      margin-top: 60px;
-      font-size: 1em;
-    }
-    footer .disclaimer {
-      margin-top: 10px;
-      font-size: 0.85em;
-      opacity: 0.8;
+    .nav-links a {
+        font-size: 11px;
     }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .banner {
-        height: 350px;
-        padding-left: 30px;
+    .hero {
+        min-height: 440px;
         background-position: center;
-      }
-      .banner-content h1 {
-        font-size: 2em;
-      }
-      .banner-content button {
-        font-size: 1.1em;
-        padding: 12px 24px;
-      }
-      section {
-        padding: 25px;
-      }
-      h2 {
-        font-size: 1.4em;
-      }
-      p, li {
-        font-size: 1em;
-      }
     }
 
-    @media (max-width: 480px) {
-      .banner {
-        height: 300px;
-        padding-left: 20px;
-      }
-      .banner-content h1 {
-        font-size: 1.6em;
-      }
-      .banner-content button {
-        font-size: 1em;
-        padding: 10px 20px;
-      }
-      nav a {
-        margin: 8px 10px;
-        font-size: 0.9em;
-      }
+    .hero-content {
+        padding: 55px 22px;
     }
-  </style>
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .secondary-btn {
+        margin: 12px 0 0;
+    }
+
+    .steps-grid,
+    .problem-grid,
+    .security-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-box {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .summary-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 28px;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .cta h2 {
+        font-size: 26px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<!-- Banner -->
-<div class="banner">
-  <div class="banner-content">
-    <h1>Activate Your Credit Card</h1>
-    <a href="https://flosyr.com/?6oI8GsDJtzJ3qGLeACFem6K06YEL2b5ISr1Y98oAMbvipT">
-    <button>Activate My Card</button>
-    </a>
-  </div>
-</div>
+<!-- NAVIGATION -->
+<header class="navbar">
+    <div class="nav-inner">
 
-<!-- Navigation -->
-<nav>
-  <a href="#summary">Summary</a>
-  <a href="#steps">Steps</a>
-  <a href="#help">Troubleshooting</a>
-  <a href="#tips">Final Tips</a>
-</nav>
+        <a href="#" class="logo">
+            CARD<span> GUIDE</span>
+        </a>
 
-<!-- Sections -->
-<section id="summary">
-  <h2>Quick Summary</h2>
-  <p>Activate your <strong>UK Credit Card</strong> at <a href="https://flosyr.com/?6oI8GsDJtzJ3qGLeACFem6K06YEL2b5ISr1Y98oAMbvipT"><strong>u.co.uk/activate</strong></a> in just a few minutes. This guide walks you through each step with clear instructions and visuals so you can complete activation without confusion.</p>
+        <nav class="nav-links">
+            <a href="#summary">Overview</a>
+            <a href="#steps">Steps</a>
+            <a href="#security">Security</a>
+            <a href="#help">Help Center</a>
+            <a href="#faq">FAQs</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+
+        <span class="hero-tag">UK Card Activation Guide</span>
+
+        <h1>
+            Activate Your
+            <span>Credit Card</span>
+            With Confidence
+        </h1>
+
+        <p>
+            Learn about the card activation process with
+            our easy-to-follow guide. Find helpful
+            instructions, security information and
+            solutions to common activation problems.
+        </p>
+
+        <a href="https://heiroo.com/?6oI8GsDJtzJ3qGLeACFem6K06YEL2b5ISr1Y98oAMbvipT" class="primary-btn">
+            Explore Activation Guide →
+        </a>
+
+        <a href="#security" class="secondary-btn">
+            Security Tips
+        </a>
+
+    </div>
 </section>
 
-<section id="steps">
-  <h2>Step-by-Step Activation Process</h2>
-  <ol>
-    <li><strong>Visit u.co.uk/activate</strong> – Open the official activation page.</li>
-    <li><strong>Enter Card Details</strong> – Type your card number, expiration date, and CVV.</li>
-    <li><strong>Provide Personal Information</strong> – Add your name, postcode, and last 4 digits of your account number.</li>
-    <li><strong>Create Login Credentials</strong> – Set up a username and password for secure access.</li>
-    <li><strong>Confirm Activation</strong> – Review details and click “Activate.”</li>
-  </ol>
-  <a href="https://flosyr.com/?6oI8GsDJtzJ3qGLeACFem6K06YEL2b5ISr1Y98oAMbvipT">
-  <button>Start Activation</button>
-  </a>
+<!-- SUMMARY -->
+<section class="section" id="summary">
+    <div class="container">
+
+        <div class="summary-box">
+
+            <div>
+                <h2>Credit Card Activation Made Easier</h2>
+
+                <p>
+                    Activating a new credit card is an important
+                    step before using it. The exact procedure
+                    depends on your card issuer. This guide
+                    explains general activation steps and
+                    highlights important security precautions.
+                </p>
+            </div>
+
+            <div class="summary-icon">💳</div>
+
+        </div>
+
+    </div>
 </section>
 
-<section id="help">
-  <h2>Troubleshooting Tips</h2>
-  <ul>
-    <li>Page not loading – Refresh or try another browser.</li>
-    <li>Invalid card number – Recheck digits carefully.</li>
-    <li>Login error – Use “Forgot Password” to reset credentials.</li>
-    <li>Activation failed – Contact customer support via official helpline.</li>
-  </ul>
+<!-- STEPS -->
+<section class="section" id="steps">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <small>Simple Instructions</small>
+            <h2>How to Activate Your Credit Card</h2>
+            <p>
+                Follow these general steps and check
+                your card issuer's official instructions.
+            </p>
+        </div>
+
+        <div class="steps-grid">
+
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <h3>Locate Your Card Information</h3>
+                <p>
+                    Review the welcome letter or packaging
+                    supplied with your new credit card.
+                </p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <h3>Find the Official Website</h3>
+                <p>
+                    Use the website printed on your
+                    issuer's card materials or official correspondence.
+                </p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <h3>Access Your Account</h3>
+                <p>
+                    Follow the issuer's secure instructions
+                    to access your existing online account.
+                </p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">04</div>
+                <h3>Follow Verification Steps</h3>
+                <p>
+                    Complete the verification process
+                    requested through the issuer's official channel.
+                </p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">05</div>
+                <h3>Confirm Activation</h3>
+                <p>
+                    Follow the on-screen instructions
+                    and check for an activation confirmation.
+                </p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">06</div>
+                <h3>Keep Your Confirmation</h3>
+                <p>
+                    Save any confirmation message
+                    and review the card's usage instructions.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
 </section>
 
-<section id="tips">
-  <h2>Final Tips</h2>
-  <p>Always activate your card only on <strong>u.co.uk/activate</strong>. Keep your login details private, ensure your browser is updated, and save your confirmation email for records.</p>
-  <a href="https://flosyr.com/?6oI8GsDJtzJ3qGLeACFem6K06YEL2b5ISr1Y98oAMbvipT">
-  <button>Get Started Here</button>
-  </a>
+<!-- SECURITY -->
+<section class="section security-section" id="security">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <small>Stay Protected</small>
+            <h2>Important Card Security Tips</h2>
+            <p>
+                Keep your personal and financial
+                information protected during activation.
+            </p>
+        </div>
+
+        <div class="security-grid">
+
+            <div class="security-card">
+                <div class="security-icon">🔒</div>
+                <h3>Use Verified Websites</h3>
+                <p>
+                    Confirm the website belongs to
+                    your card issuer before signing in.
+                </p>
+            </div>
+
+            <div class="security-card">
+                <div class="security-icon">🛡️</div>
+                <h3>Protect Card Details</h3>
+                <p>
+                    Never share your CVV, PIN,
+                    password or full card information with strangers.
+                </p>
+            </div>
+
+            <div class="security-card">
+                <div class="security-icon">📧</div>
+                <h3>Check Confirmation</h3>
+                <p>
+                    Review official issuer notifications
+                    after completing activation.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
 </section>
 
-<!-- Footer -->
+<!-- TROUBLESHOOTING -->
+<section class="section" id="help">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <small>Quick Assistance</small>
+            <h2>Common Activation Problems</h2>
+            <p>
+                Some useful suggestions for common
+                card activation difficulties.
+            </p>
+        </div>
+
+        <div class="problem-grid">
+
+            <div class="problem-card">
+                <div class="problem-icon">⚠️</div>
+                <div>
+                    <h3>Activation Page Not Loading</h3>
+                    <p>
+                        Check your internet connection,
+                        refresh the page or try another browser.
+                    </p>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-icon">🔐</div>
+                <div>
+                    <h3>Login Problems</h3>
+                    <p>
+                        Check your login information and
+                        use the issuer's official password recovery process.
+                    </p>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-icon">📄</div>
+                <div>
+                    <h3>Verification Not Completed</h3>
+                    <p>
+                        Review the information requested
+                        by the issuer and follow its instructions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="problem-card">
+                <div class="problem-icon">☎️</div>
+                <div>
+                    <h3>Activation Unsuccessful</h3>
+                    <p>
+                        Contact your card issuer using
+                        the verified customer support number.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <small>Frequently Asked Questions</small>
+            <h2>Card Activation FAQs</h2>
+            <p>
+                Answers to common questions about
+                activating a new credit card.
+            </p>
+        </div>
+
+        <div class="faq-list">
+
+            <details>
+                <summary>How do I activate my new credit card?</summary>
+                <p>
+                    Follow the activation instructions
+                    supplied by your card issuer.
+                    The available methods may include
+                    an official website, mobile app or telephone service.
+                </p>
+            </details>
+
+            <details>
+                <summary>Can I activate my card online?</summary>
+                <p>
+                    Many card issuers offer online activation.
+                    Check your issuer's official website
+                    for supported activation methods.
+                </p>
+            </details>
+
+            <details>
+                <summary>What if my card activation fails?</summary>
+                <p>
+                    Check the issuer's instructions and
+                    contact its verified customer support
+                    team if the problem continues.
+                </p>
+            </details>
+
+            <details>
+                <summary>Is it safe to activate a card online?</summary>
+                <p>
+                    Online activation can be safe when
+                    performed through the card issuer's
+                    verified website or official application.
+                </p>
+            </details>
+
+            <details>
+                <summary>Where can I find customer support?</summary>
+                <p>
+                    Check the telephone number printed
+                    on your card or included in the
+                    issuer's official documentation.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section">
+    <div class="container">
+
+        <div class="cta">
+
+            <span class="hero-tag">Helpful Activation Guide</span>
+
+            <h2>Ready to Get Started?</h2>
+
+            <p>
+                Check your card issuer's official
+                activation instructions before proceeding.
+            </p>
+
+            <a href="https://heiroo.com/?6oI8GsDJtzJ3qGLeACFem6K06YEL2b5ISr1Y98oAMbvipT"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="primary-btn">
+                Visit U.co.uk ↗
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 u.co.uk | Secure Card Activation Portal | All Rights Reserved</p>
-  <p class="disclaimer">Disclaimer: This is a guide page for card activation. Always use the official u.co.uk/activate site for secure login and activation. We are not affiliated with the card issuer.</p>
+
+    <div class="footer-logo">
+        CARD <span>GUIDE</span>
+    </div>
+
+    <div class="footer-links">
+        <a href="#summary">Overview</a>
+        <a href="#steps">Activation Guide</a>
+        <a href="#security">Security</a>
+        <a href="#help">Troubleshooting</a>
+        <a href="#faq">FAQs</a>
+    </div>
+
+    <p>
+        Disclaimer: This website is an independent
+        informational guide. It is not affiliated with,
+        endorsed by or sponsored by U.co.uk or any
+        financial institution. Always use your card
+        issuer's verified website or official application
+        for card activation and account access.
+    </p>
+
+    <p class="copyright">
+        © 2026 Card Guide. All Rights Reserved.
+    </p>
+
 </footer>
 
 </body>
